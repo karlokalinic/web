@@ -1,10 +1,10 @@
-# Suno Callback Server
+# Callback Server
 
-Ovo je minimalni Express backend za primanje callback podataka s [Suno API-ja](https://app.suno.ai/).
+Ovo je minimalni Express backend za primanje callback podataka.
 
 ## Kako radi
 
-Kad koristiš Suno API s `callbackUrl`, Suno će poslati POST request na `/suno-callback`.
+Kad koristiš API s `callbackUrl`, poslati će POST request na `/suno-callback`.
 
 ## Kako pokrenuti lokalno
 
