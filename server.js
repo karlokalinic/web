@@ -1,22 +1,13 @@
-const express = require('express');
+const express = require('express'); 
 const app = express();
-
-const PORT = process.env.PORT || 3000;
-
 app.use(express.json());
 
-// Glavni endpoint za callback koji Suno koristi
-app.post('/suno-callback', (req, res) => {
-  console.log('Primljen callback od Suno!');
-  console.log(JSON.stringify(req.body, null, 2)); // ispiši cijeli sadržaj
+app.post('/callback', (req, res) => { 
+  console.log('POST primljen:', req.body); 
   res.status(200).send('OK');
-});
+}); 
 
-// Basic root
-app.get('/', (req, res) => {
-  res.send('Suno Callback Server radi! 🚀');
-});
-
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
-  console.log(`Server sluša na http://localhost:${PORT}`);
+  console.log(`Backend server na portu ${PORT}`); 
 });
